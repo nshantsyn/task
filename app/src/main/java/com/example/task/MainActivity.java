@@ -3,19 +3,17 @@ package com.example.task;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.GridView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class MainActivity extends AppCompatActivity {
     List<String> buttons =  new ArrayList<>();
@@ -77,21 +75,21 @@ public class MainActivity extends AppCompatActivity {
         adapter = new GridAdapter(this, buttons);
         gridView.setAdapter(adapter);
 
-        Button button = findViewById(R.id.button2);
+        Button button = findViewById(R.id.buttonMirror);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 createMirror();
             }
         });
-        Button button1 = findViewById(R.id.button3);
+        Button button1 = findViewById(R.id.buttonSave);
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 insertCombination(getCombination());
             }
         });
-        Button button2 = findViewById(R.id.button4);
+        Button button2 = findViewById(R.id.buttonCheck);
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -104,6 +102,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         //////////
+        Button button3 = findViewById(R.id.buttonAll);
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,AdditionalActivity.class);
+                startActivity(intent);
+            }
+        });
         createDB();
     }
     protected String getCombination(){

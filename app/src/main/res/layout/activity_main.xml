@@ -15,7 +15,7 @@
         android:id="@+id/grid"/>
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/buttonMirror"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="116dp"
@@ -25,9 +25,9 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/buttonSave"
         android:layout_width="148dp"
-        android:layout_height="47dp"
+        android:layout_height="48dp"
         android:layout_marginStart="116dp"
         android:layout_marginTop="380dp"
         android:text="Сохранить"
@@ -35,12 +35,22 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/buttonCheck"
         android:layout_width="148dp"
-        android:layout_height="47dp"
+        android:layout_height="48dp"
         android:layout_marginStart="116dp"
         android:layout_marginTop="440dp"
         android:text="Проверить"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="504dp"
+        android:text="Все комбинации"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

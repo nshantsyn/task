@@ -54,7 +54,10 @@ public class GridAdapter extends BaseAdapter {
         v = inflater.inflate(R.layout.item, null);
 
         Button button = (Button) v.findViewById(R.id.button);
+        button.setText(items.get(position));
+        if(button.getText().equals("0"))
         button.setBackgroundColor(Color.RED);
+        else button.setBackgroundColor(Color.GREEN);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -69,7 +72,7 @@ public class GridAdapter extends BaseAdapter {
             }
 
         });
-      //  tv.setText(items.get(position));
+        //button.setText(items.get(position));
 
         return v;
     }
