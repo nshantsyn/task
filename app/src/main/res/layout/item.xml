@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Button android:id="@+id/button"
+    android:layout_width="55dp"
+    android:layout_height="56dp"
+    android:text="0"
+    tools:layout_editor_absoluteX="43dp"
+    tools:layout_editor_absoluteY="110dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" />
